@@ -11,6 +11,7 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
+secret*
 
 .idea/
 .ionic/
@@ -32,3 +33,16 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+
+
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+www/
+
+.firebase/
+dist/
+tmp/
+temp/
+hooks/
+
+
