@@ -15,7 +15,7 @@ import { AuthenticationService } from '../../providers/authentication.service';
   styleUrls: ['./signup.scss'],
 })
 export class SignupPage {
-  signup: UserOptions = { username: '', password: '' };
+  signup: UserOptions = { email: '', password: '' };
   submitted = false;
 
   constructor(
@@ -28,10 +28,11 @@ export class SignupPage {
     this.submitted = true;
     console.log("REGISTER CALL");
     if (form.valid) {
-      // this.userData.signup(this.signup.username);
+      // 
       this.authService.registerUser(form.value)
       .then(
         results=> {
+          this.userData.signup(this.signup.email);
           this.router.navigateByUrl('/app/tabs/schedule');
         },
         error=>{

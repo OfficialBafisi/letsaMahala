@@ -21,7 +21,7 @@ export class AccountPage implements AfterViewInit {
   ) { }
 
   ngAfterViewInit() {
-    this.getUsername();
+    this.getEmail();
   }
 
   updatePicture() {
@@ -39,8 +39,8 @@ export class AccountPage implements AfterViewInit {
         {
           text: 'Ok',
           handler: (data: any) => {
-            this.userData.setUsername(data.username);
-            this.getUsername();
+            this.userData.setEmail(data.username);
+            this.getEmail();
           }
         }
       ],
@@ -56,8 +56,8 @@ export class AccountPage implements AfterViewInit {
     await alert.present();
   }
 
-  getUsername() {
-    this.userData.getUsername().then((username) => {
+  getEmail() {
+    this.userData.getEmail().then((username) => {
       this.username = username;
     });
   }

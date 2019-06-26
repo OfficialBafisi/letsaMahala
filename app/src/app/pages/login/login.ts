@@ -16,7 +16,7 @@ import { AuthenticationService } from '../../providers/authentication.service';
   styleUrls: ['./login.scss'],
 })
 export class LoginPage {
-  login: UserOptions = { username: '', password: '' };
+  login: UserOptions = { email: '', password: '' };
   submitted = false;
 
   constructor(
@@ -29,9 +29,10 @@ export class LoginPage {
     this.submitted = true;
     console.log("LOGIN CALL");
     if (form.valid) {
-      // this.userData.login(this.login.username);
+      // 
       this.authService.loginUser(form.value)
       .then(results => {
+        this.userData.login(this.login.email);
         this.router.navigateByUrl('/app/tabs/schedule');
       },
       error=> {
