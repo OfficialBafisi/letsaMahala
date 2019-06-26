@@ -13,25 +13,3 @@ export const environment = {
  * because it will have performance impact when throw error
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
-
-
-// <!-- The core Firebase JS SDK is always required and must be listed first -->
-// <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
-
-// <!-- TODO: Add SDKs for Firebase products that you want to use
-//      https://firebase.google.com/docs/web/setup#config-web-app -->
-
-// <script>
-//   // Your web app's Firebase configuration
-//   var firebaseConfig = {
-//     apiKey: "AIzaSyAP_guLDjMtP826XCKBDYreo-JI17sqw9w",
-//     authDomain: "letsamahala.firebaseapp.com",
-//     databaseURL: "https://letsamahala.firebaseio.com",
-//     projectId: "letsamahala",
-//     storageBucket: "",
-//     messagingSenderId: "980640081468",
-//     appId: "1:980640081468:web:5234f3c162296519"
-//   };
-//   // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig);
-// </script>
