@@ -14,8 +14,10 @@ import { environment } from '../environments/environment';
 
 import * as firebase from 'firebase';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AuthenticationService } from './providers/authentication.service'
+import { AuthenticationService } from './providers/authentication.service';
 firebase.initializeApp(environment.firebase);
+import { Contacts } from '@ionic-native/contacts';
+import { ContactsService } from './providers/contacts.service';
 
 @NgModule({
   imports: [
@@ -30,7 +32,7 @@ firebase.initializeApp(environment.firebase);
     })
   ],
   declarations: [AppComponent],
-  providers: [InAppBrowser, SplashScreen, StatusBar, AuthenticationService ],
+  providers: [InAppBrowser, SplashScreen, StatusBar, AuthenticationService, Contacts, ContactsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
