@@ -13,9 +13,14 @@
       <ion-row class="ion-align-items-stretch">
         <ion-col size="12" size-md="6">
           <ion-item *ngFor="let contact of contacts">
-              {{contact}}
+            <!-- <ion-icon item-start *ngIf="contact.phoneNumbers"
+            ios="ios-call"
+            md="md-call"
+            tappable></ion-icon> -->
+
             <ion-label>
-              This: {{contact.name}}
+              <ion-icon name="contacts"></ion-icon>
+              {{contact.name.givenName}}
             </ion-label>
           </ion-item>
         </ion-col>
