@@ -25,6 +25,11 @@ export class AppComponent implements OnInit {
       icon: 'contacts'
     },
     {
+      title: 'Recent',
+      url: '/app/tabs/call-log',
+      icon: 'list-box'
+    },
+    {
       title: 'Schedule',
       url: '/app/tabs/schedule',
       icon: 'calendar'
@@ -33,11 +38,6 @@ export class AppComponent implements OnInit {
       title: 'Speakers',
       url: '/app/tabs/speakers',
       icon: 'contacts'
-    },
-    {
-      title: 'Map',
-      url: '/app/tabs/map',
-      icon: 'map'
     },
     {
       title: 'About',
