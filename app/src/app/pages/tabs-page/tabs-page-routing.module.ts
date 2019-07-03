@@ -40,11 +40,11 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'map',
+        path: 'recent',
         children: [
           {
             path: '',
-            loadChildren: '../map/map.module#MapModule'
+            loadChildren: '../call-log/call-log.module#CallLogPageModule'
           }
         ]
       },

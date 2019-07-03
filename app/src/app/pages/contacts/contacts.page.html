@@ -12,17 +12,15 @@
     <ion-grid fixed>
       <ion-row class="ion-align-items-stretch">
         <ion-col size="12" size-md="6">
-          <ion-item *ngFor="let contact of contacts">
-            <!-- <ion-icon item-start *ngIf="contact.phoneNumbers"
-            ios="ios-call"
-            md="md-call"
-            tappable></ion-icon> -->
+          <ion-card  *ngFor="let contact of contacts">
+            <ion-card-header  *ngIf="contact['name']" >
+             <ion-icon name="contacts"></ion-icon> <ion-card-title>{{contact.name.givenName}}</ion-card-title>
+            </ion-card-header>
 
-            <ion-label>
-              <ion-icon name="contacts"></ion-icon>
-              {{contact.name.givenName}}
-            </ion-label>
-          </ion-item>
+            <ion-card-content>
+              <strong>{{contact.phoneNumbers[0].value}}</strong>
+            </ion-card-content>
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
