@@ -58,6 +58,14 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'contacts',
+        children: [
+        {
+          path: '',
+          loadChildren: '../contacts/contacts.module#ContactsPageModule'
+        }]
+      },
+      {
         path: '',
         redirectTo: '/app/tabs/schedule',
         pathMatch: 'full'
