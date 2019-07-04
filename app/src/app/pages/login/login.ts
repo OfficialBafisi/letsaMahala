@@ -33,7 +33,7 @@ export class LoginPage {
       this.authService.loginUser(form.value)
       .then(results => {
         this.userData.login(this.login.email);
-        this.router.navigateByUrl('/app/tabs/schedule');
+        this.router.navigateByUrl('/app/tabs/recent');
       },
       error=> {
         console.log(error);

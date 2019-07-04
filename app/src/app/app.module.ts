@@ -18,6 +18,7 @@ import { AuthenticationService } from './providers/authentication.service';
 firebase.initializeApp(environment.firebase);
 import { Contacts } from '@ionic-native/contacts';
 import { CallLog } from '@ionic-native/call-log/ngx'
+import { CallNumber } from '@ionic-native/call-number/ngx';
 import { ContactsService } from './providers/contacts.service';
 
 @NgModule({
@@ -33,7 +34,7 @@ import { ContactsService } from './providers/contacts.service';
     })
   ],
   declarations: [AppComponent],
-  providers: [InAppBrowser, SplashScreen, StatusBar, AuthenticationService, Contacts, CallLog, ContactsService ],
+  providers: [InAppBrowser, SplashScreen, StatusBar, AuthenticationService, Contacts, CallLog, CallNumber, ContactsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

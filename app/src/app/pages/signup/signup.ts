@@ -33,7 +33,7 @@ export class SignupPage {
       .then(
         results=> {
           this.userData.signup(this.signup.email);
-          this.router.navigateByUrl('/app/tabs/schedule');
+          this.router.navigateByUrl('/app/tabs/recent');
         },
         error=>{
           console.log(error);
