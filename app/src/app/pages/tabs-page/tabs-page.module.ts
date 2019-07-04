@@ -6,12 +6,9 @@ import { TabsPage } from './tabs-page';
 import { TabsPageRoutingModule } from './tabs-page-routing.module';
 
 import { AboutModule } from '../about/about.module';
-import { ScheduleModule } from '../schedule/schedule.module';
-import { SessionDetailModule } from '../session-detail/session-detail.module';
-import { SpeakerDetailModule } from '../speaker-detail/speaker-detail.module';
-import { SpeakerListModule } from '../speaker-list/speaker-list.module';
 import { ContactsPageModule } from '../contacts/contacts.module';
 import { CallLogPageModule } from "../call-log/call-log.module";
+import { DialerPageModule } from '../dialer/dialer.module';
 
 @NgModule({
   imports: [
@@ -19,10 +16,7 @@ import { CallLogPageModule } from "../call-log/call-log.module";
     CommonModule,
     IonicModule,
     CallLogPageModule,
-    ScheduleModule,
-    SessionDetailModule,
-    SpeakerDetailModule,
-    SpeakerListModule,
+    DialerPageModule,
     TabsPageRoutingModule,
     ContactsPageModule
   ],

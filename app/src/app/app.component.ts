@@ -26,18 +26,13 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Recent',
-      url: '/app/tabs/call-log',
+      url: '/app/tabs/recent',
       icon: 'list-box'
     },
     {
-      title: 'Schedule',
-      url: '/app/tabs/schedule',
-      icon: 'calendar'
-    },
-    {
-      title: 'Speakers',
-      url: '/app/tabs/speakers',
-      icon: 'contacts'
+      title: 'Dialer',
+      url: '/app/tabs/dialer',
+      icon: 'call'
     },
     {
       title: 'About',

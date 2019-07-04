@@ -31,6 +31,7 @@
     "@angular/router": "7.2.9",
     "@angular/service-worker": "~7.2.9",
     "@ionic-native/call-log": "^5.9.0",
+    "@ionic-native/call-number": "^5.9.0",
     "@ionic-native/contacts": "^5.8.0",
     "@ionic-native/core": "^5.9.0",
     "@ionic-native/in-app-browser": "^5.9.0",

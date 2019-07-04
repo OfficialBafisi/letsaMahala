@@ -1,44 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs-page';
-import { SchedulePage } from '../schedule/schedule';
-
 
 const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
     children: [
-      {
-        path: 'schedule',
-        children: [
-          {
-            path: '',
-            component: SchedulePage,
-          },
-          {
-            path: 'session/:sessionId',
-            loadChildren: '../session-detail/session-detail.module#SessionDetailModule'
-          }
-        ]
-      },
-      {
-        path: 'speakers',
-        children: [
-          {
-            path: '',
-            loadChildren: '../speaker-list/speaker-list.module#SpeakerListModule'
-          },
-          {
-            path: 'session/:sessionId',
-            loadChildren: '../session-detail/session-detail.module#SessionDetailModule'
-          },
-          {
-            path: 'speaker-details/:speakerId',
-            loadChildren: '../speaker-detail/speaker-detail.module#SpeakerDetailModule'
-          }
-        ]
-      },
       {
         path: 'recent',
         children: [
@@ -66,8 +34,16 @@ const routes: Routes = [
         }]
       },
       {
+        path: 'dialer',
+        children: [
+        {
+          path: '',
+          loadChildren: '../dialer/dialer.module#DialerPageModule'
+        }]
+      },
+      {
         path: '',
-        redirectTo: '/app/tabs/schedule',
+        redirectTo: '/app/tabs/recent',
         pathMatch: 'full'
       }
     ]
