@@ -1,15 +1,22 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Recent Numbers</ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Dial</ion-title>
+	</ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
 
+	<ion-card >
+		<ion-card-header>
+			<input (input)="onInputChange($event)" class="input" value={{value}} placeholder="Dial a number" />
+		</ion-card-header>
 
-	Keyboard to go here!!!
+		<ion-card-content>
+			<div class="simple-keyboard"></div>
+		</ion-card-content>
 
+	</ion-card>
 </ion-content>

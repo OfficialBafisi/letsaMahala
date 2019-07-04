@@ -20,6 +20,8 @@ import { Contacts } from '@ionic-native/contacts';
 import { CallLog } from '@ionic-native/call-log/ngx'
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { ContactsService } from './providers/contacts.service';
+// import { KeyboardComponent } from './components/keyboard/keyboard.component';
+
 
 @NgModule({
   imports: [
