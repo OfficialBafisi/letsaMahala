@@ -1,6 +1,24 @@
-.active {
-  color: var(--ion-color-primary);
-  ion-icon {
-    color: var(--ion-color-primary);
-  }
+.scrollContent{
+    max-height: 200px;
+    overflow: scroll;
+}
+.transparent{
+    --background: rgba(0,0,0,0);
+    background: rgba(0,0,0,0);
+}
+.content{
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/img/sidemenu1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.content ion-list {
+    padding: 0px;
+}
+.list-bottom-shadow{
+    box-shadow: 0 -6px 10px inset rgba(0,0,0,0.3);
+}
+.notes{
+    font-size: 14px;
 }

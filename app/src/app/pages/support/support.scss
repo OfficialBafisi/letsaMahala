@@ -1,13 +1,25 @@
 .support-logo {
-  padding: 20px 0;
-  min-height: 200px;
-  text-align: center;
+	padding: 20px 0;
+	min-height: 200px;
+	text-align: center;
 }
 
 .support-logo img {
-  max-width: 150px;
+	max-width: 150px;
 }
 
 .list {
-  margin-bottom: 0;
+	margin-bottom: 0;
+}
+
+.supportList {
+	padding: 0px;
+}
+.supportMessage ion-label {
+	color:var(--ion-color-light);
+	font-size: 20px;
+}
+.supportMessage ion-textarea {
+	
+	border: solid;
 }

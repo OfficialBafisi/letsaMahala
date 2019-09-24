@@ -7,35 +7,80 @@
     <ion-title>Recent Numbers</ion-title>
   </ion-toolbar>
 </ion-header>
- 
+
 <ion-content>
-    <ion-grid>
-        <ion-row>
-          <ion-col size="4">
-              <ion-button (click)="getContacts('type','1','==')" size="small" color="success">Incoming</ion-button>
-          </ion-col>
-          <ion-col size="4">
-              <ion-button (click)="getContacts('type','2','==')" size="small" color="warning">Outgoing</ion-button>
-          </ion-col>
-          <ion-col size="4">
-              <ion-button (click)="getContacts('type','5','==')" size="small" color="danger">Rejected</ion-button>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-              <strong>{{listStyle}}</strong>
-          </ion-col>
-        </ion-row>
-    </ion-grid>    
+  <ion-grid>
+    <ion-row>
+      <div class="segmentSection">
+        <ion-segment>
+          <ion-segment-button value="incoming" (click)="getContacts('type','1','==')">
+            <ion-icon name="person" ng-reflect-name="person" role="img"></ion-icon>
+            <ion-label>Incoming</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="outgoing" (click)="getContacts('type','2','==')">
+            <ion-icon name="people" ng-reflect-name="people" role="img"></ion-icon>
+            <ion-label>Outgoing</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="missed" (click)="getContacts('type','5','==')">
+            <ion-icon name="search" ng-reflect-name="search" role="img"></ion-icon>
+            <ion-label>Missed</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+    </ion-row>
+  </ion-grid> 
+
+
   
-    <ion-card  *ngFor="let contact of logsFound">
-        <ion-card-header  *ngIf="contact['name']" >
-          <ion-card-title>{{contact["name"]}}</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-            <strong>{{contact["number"]}}</strong>
-        </ion-card-content>
-    </ion-card>
- 
+  <ion-card  *ngFor="let contact of logsFound">
+    <ion-card-content>
+     <ion-item class="callLogList item-lines-none in-list item ion-focusable">
+      <div class="listSection" >
+        <div class="imgSection">
+          <ion-avatar class="userAvatar" slot="start">
+              <ion-img _ngcontent-c2="" src="../../assets/img/speakers/lion.jpg"></ion-img>
+          </ion-avatar>
+        </div>
+        <div class="usernameSection">
+                <strong class="userName" >{{contact["name"]}}</strong>
+                <br>
+                <strong class="descText">{{contact["number"]}}</strong>
+        </div>
+      </div>
+    </ion-item>
+  </ion-card-content>
+  </ion-card>
+
+<ion-card>
+  <ion-card-content>
+   <ion-item class="callLogList item-lines-none in-list item ion-focusable">
+    <div class="listSection" >
+      <div class="imgSection">
+        <ion-avatar class="userAvatar" slot="start"><ion-img src="../../assets/img/speakers/lion.jpg"></ion-img></ion-avatar>
+      </div>
+      <div class="usernameSection"><h6 class="userName"> <strong>Test 1</strong> </h6><p class="descText" no-margin="" no-padding=""><strong>647 303 2065</strong> </p></div>
+    </div>
+
+  </ion-item>
+</ion-card-content>
+</ion-card>
+
+
+<ion-card>
+  <ion-card-content>
+   <ion-item class="callLogList item-lines-none in-list item ion-focusable">
+    <div class="listSection" >
+      <div class="imgSection">
+        <ion-avatar class="userAvatar" slot="start"><ion-img _ngcontent-c2="" src="../../assets/img/speakers/lion.jpg"></ion-img></ion-avatar>
+      </div>
+      <div class="usernameSection"><h6 class="userName"> <strong>Test 2</strong> </h6><p class="descText" no-margin="" no-padding=""> <strong>647 303 2078</strong></p></div>
+    </div>
+
+  </ion-item>
+</ion-card-content>
+
+</ion-card>
+
+
+
 </ion-content>

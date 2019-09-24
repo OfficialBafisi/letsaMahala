@@ -12,6 +12,26 @@
 	<ion-card >
 		<ion-card-header>
 			<input (input)="onInputChange($event)" class="input" value={{value}} placeholder="Dial a number" />
+			<ion-grid>
+				<ion-row>
+					<div class="callButtonSeg">
+						<ion-segment>
+							<ion-segment-button color="success" value="incoming">
+								<ion-icon name="call" ng-reflect-name="call" role="img"></ion-icon>
+								<ion-label>Call</ion-label>
+							</ion-segment-button>
+							<ion-segment-button color="warning" value="save">
+								<ion-icon name="save" ng-reflect-name="save" role="img"></ion-icon>
+								<ion-label>Save</ion-label>
+							</ion-segment-button>
+						<!-- 	<ion-segment-button value="missed" (click)="getContacts('type','5','==')">
+								<ion-icon name="search" ng-reflect-name="search" role="img"></ion-icon>
+								<ion-label>Missed</ion-label>
+							</ion-segment-button> -->
+						</ion-segment>
+					</div>
+				</ion-row>
+			</ion-grid> 
 		</ion-card-header>
 
 		<ion-card-content>

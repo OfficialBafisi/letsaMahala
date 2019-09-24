@@ -45,4 +45,7 @@ tmp/
 temp/
 hooks/
 
+# Do not commit Keys
+app/src/environments/environment.ts
+
 
