@@ -13,7 +13,7 @@ export class ContactsService {
   everyone;
 
   constructor(private contacts: Contacts, private platform: Platform) {
-  this.everyone=this.contacts.find(["*"]) 
+  this.everyone=this.contacts.find(['displayName', 'name', 'phoneNumbers'], {filter:"",multiple:true, hasPhoneNumber:true}) 
   console.log(JSON.stringify(this.everyone));
 }
 

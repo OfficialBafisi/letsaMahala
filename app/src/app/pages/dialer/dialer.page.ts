@@ -4,9 +4,9 @@ import Keyboard from 'simple-keyboard';
 
 @Component({
 	selector: 'dialer',
-    encapsulation: ViewEncapsulation.None,
+	encapsulation: ViewEncapsulation.None,
 	templateUrl: './dialer.page.html',
-	styleUrls: ["../../../../node_modules/simple-keyboard/build/css/index.css", './dialer.page.scss', ],
+	styleUrls: ['./dialer.page.scss', "../../../../node_modules/simple-keyboard/build/css/index.css",],
 })
 export class DialerPage implements OnInit {
 
@@ -23,6 +23,7 @@ export class DialerPage implements OnInit {
 			onKeyPress: button =>this.onKeyPress(button),
 			mergeDisplay: true,
 			layoutName: "numbers",
+			theme: "hg-theme-default hg-layout-default myTheme",
 			layout: {
 				default: [
 				"q w e r t y u i o p",
@@ -53,7 +54,18 @@ export class DialerPage implements OnInit {
 				"{metaleft}": "cmd ⌘",
 				"{metaright}": "cmd ⌘",
 				"{abc}": "ABC"
+			},
+			buttonTheme: [
+			{
+				class: "hg-red",
+				buttons: "4 5 6"
+			},
+			{
+				class: "hg-highlight",
+				buttons: "Q q"
 			}
+			]
+
 		});
 	}
 
@@ -65,34 +77,34 @@ export class DialerPage implements OnInit {
 	onKeyPress = (button: string) => {
 		console.log("Button Pressed", button);
 
-  	//Handling shift and caps lock buttons
-  	if (button ==="{shift}" || button === "{lock}") {
-  		this.handleShift();
-  	}
+		//Handling shift and caps lock buttons
+		if (button ==="{shift}" || button === "{lock}") {
+			this.handleShift();
+		}
 
-  	if (button === "{numbers}" || button === "{abc}") this.handleNumbers();
-  }
+		if (button === "{numbers}" || button === "{abc}") this.handleNumbers();
+	}
 
-  onInputChange = (event: any) => {
-  	this.keyboard.setInput(event.target.value);
-  }
+	onInputChange = (event: any) => {
+		this.keyboard.setInput(event.target.value);
+	}
 
-  handleShift = () => {
-  	let currentLayout = this.keyboard.options.layoutName;
-  	let shitToggle = currentLayout === "default" ? "shift" : "default";
+	handleShift = () => {
+		let currentLayout = this.keyboard.options.layoutName;
+		let shitToggle = currentLayout === "default" ? "shift" : "default";
 
-  	this.keyboard.setOptions({
-  		layoutName: shitToggle
-  	})
-  }
+		this.keyboard.setOptions({
+			layoutName: shitToggle
+		})
+	}
 
-   handleNumbers =()=> {
-  	let currentLayout = this.keyboard.options.layoutName;
-  	let numbersToggle = currentLayout !== "numbers" ? "numbers" : "default";
+	handleNumbers =()=> {
+		let currentLayout = this.keyboard.options.layoutName;
+		let numbersToggle = currentLayout !== "numbers" ? "numbers" : "default";
 
-  	this.keyboard.setOptions({
-  		layoutName: numbersToggle
-  	});
-  }
+		this.keyboard.setOptions({
+			layoutName: numbersToggle
+		});
+	}
 
 }

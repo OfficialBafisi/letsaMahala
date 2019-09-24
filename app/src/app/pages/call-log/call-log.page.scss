@@ -1,0 +1,52 @@
+.segmentSection {
+	width: 100%;
+    background: #2222;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    justify-content: center;
+}
+
+.callLogList{
+    background: #26304f;
+}
+
+.listSection {
+	display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.imgSection{
+	    position: relative;
+}
+
+.userAvatar {
+	background: #fff;
+    width: 45px;
+    height: 45px;
+}
+
+.usernameSection{
+	overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+.userName {
+	margin-bottom: 5px;
+    margin-top: 12px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.descText {
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 12px;
+}
+

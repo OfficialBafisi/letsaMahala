@@ -4,6 +4,7 @@
   width: 100%;
   height: 30%;
   text-align: center;
+  background-size: cover;
 }
 
 .about-header img {
@@ -12,13 +13,22 @@
 
 .about-info p {
   color: var(--ion-color-dark);
-  text-align: left;
+  text-align: center;
+}
+
+.about-info div {
+  text-align: center
 }
 
 .about-info ion-icon {
   margin-inline-end: 32px;
+  text-align: center;
 }
 
 .ios .about-info {
   text-align: center;
+}
+
+.infoList {
+  padding: 0;
 }
